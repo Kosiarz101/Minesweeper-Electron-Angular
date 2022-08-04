@@ -1,12 +1,15 @@
 {
   "name": "minesweeper",
   "version": "0.0.0",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "electron": "electron .",
+    "electron-build": "ng build && npm run electron"
   },
   "private": true,
   "dependencies": {
@@ -15,9 +18,15 @@
     "@angular/compiler": "^14.0.0",
     "@angular/core": "^14.0.0",
     "@angular/forms": "^14.0.0",
+    "@angular/localize": "^14.0.0",
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^13.0.0",
+    "@popperjs/core": "^2.10.2",
+    "bootstrap": "^5.2.0",
+    "electron": "^19.0.10",
+    "ngx-electron": "^2.2.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -34,5 +43,10 @@
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.7.2"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   }
 }
