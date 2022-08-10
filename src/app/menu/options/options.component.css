@@ -1,0 +1,13 @@
+.middle-div {
+  flex: 1 1 auto;
+  margin: 0 500px 0 500px;
+}
+
+.child {
+  list-style: none;
+  width: 200px;
+}
+
+.btn {
+  min-width: 200px;
+}

@@ -9,10 +9,14 @@ import {Router} from "@angular/router";
 })
 export class TitleScreenComponent implements OnInit {
 
-  constructor(private electronService: ElectronService) {
+  constructor(private electronService: ElectronService, private router: Router) {
   }
 
   ngOnInit(): void {
+  }
+
+  onStart() {
+    this.router.navigate(['/options']);
   }
 
   onQuit(){

@@ -1,0 +1,26 @@
+<div class="outer-div d-flex align-items-center justify-content-center">
+  <form [formGroup]="optionsForm" class="middle-div d-flex flex-column" (ngSubmit)="onSubmit()">
+    <div class="d-flex justify-content-between my-4">
+      <h3 class="child">board size: </h3>
+      <select [(ngModel)]="boardSizes[0]" class="form-select child" formControlName="chosenBoardSize" id="sizes">
+        <option *ngFor="let size of boardSizes; let i = index" [value]="size">
+          {{size}}
+        </option>
+      </select>
+    </div>
+    <div class="d-flex justify-content-between my-4">
+      <h3 class="child">bomb quantity: </h3>
+      <select [(ngModel)]="bombQuantities[0]" class="form-select child" formControlName="chosenBombQuantity" id="quantities">
+        <option *ngFor="let quantity of bombQuantities; let i = index" [value]="quantity">
+          {{quantity}}
+        </option>
+      </select>
+    </div>
+    <div class="d-flex justify-content-between">
+      <button (click)="onReturn()" class="btn btn-secondary">Back To Menu</button>
+      <button type="submit" class="btn btn-primary">Start</button>
+    </div>
+  </form>
+</div>
+
+

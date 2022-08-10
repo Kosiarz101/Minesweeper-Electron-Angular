@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+.outer-div {
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.middle-div {
+  position: relative;
+}
